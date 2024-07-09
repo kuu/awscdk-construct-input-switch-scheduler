@@ -6,7 +6,7 @@ import { Construct } from 'constructs';
 
 export interface EventBridgeScheduleProps {
   readonly func: NodejsFunction;
-  readonly intervalInMinutes: number;
+  readonly intervalInSeconds: number;
 }
 
 export class EventBridgeSchedule extends Construct {
@@ -15,10 +15,10 @@ export class EventBridgeSchedule extends Construct {
   constructor(scope: Construct, id: string, props: EventBridgeScheduleProps) {
     super(scope, id);
 
-    const { func, intervalInMinutes } = props;
+    const { func, intervalInSeconds } = props;
 
     this.rule = new Rule(this, 'InvokeFunctionEveryXMinutes', {
-      schedule: Schedule.rate(cdk.Duration.minutes(intervalInMinutes)),
+      schedule: Schedule.rate(cdk.Duration.seconds(intervalInSeconds)),
     });
 
     this.rule.addTarget(

@@ -25,7 +25,7 @@ test('Create EventBridgeSchedule', () => {
       channelId: '12345',
       inputAttachments: ['input1', 'input2'],
     }).func,
-    intervalInMinutes: 1,
+    intervalInSeconds: 60,
   });
 
   const template = Template.fromStack(stack);
