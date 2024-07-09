@@ -402,7 +402,7 @@ const eventBridgeScheduleProps: EventBridgeScheduleProps = { ... }
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#awscdk-construct-input-switch-scheduler.EventBridgeScheduleProps.property.func">func</a></code> | <code>aws-cdk-lib.aws_lambda_nodejs.NodejsFunction</code> | *No description.* |
-| <code><a href="#awscdk-construct-input-switch-scheduler.EventBridgeScheduleProps.property.intervalInMinutes">intervalInMinutes</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#awscdk-construct-input-switch-scheduler.EventBridgeScheduleProps.property.intervalInSeconds">intervalInSeconds</a></code> | <code>number</code> | *No description.* |
 
 ---
 
@@ -416,10 +416,10 @@ public readonly func: NodejsFunction;
 
 ---
 
-##### `intervalInMinutes`<sup>Required</sup> <a name="intervalInMinutes" id="awscdk-construct-input-switch-scheduler.EventBridgeScheduleProps.property.intervalInMinutes"></a>
+##### `intervalInSeconds`<sup>Required</sup> <a name="intervalInSeconds" id="awscdk-construct-input-switch-scheduler.EventBridgeScheduleProps.property.intervalInSeconds"></a>
 
 ```typescript
-public readonly intervalInMinutes: number;
+public readonly intervalInSeconds: number;
 ```
 
 - *Type:* number

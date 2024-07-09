@@ -26,7 +26,7 @@ export class InputSwitchScheduler extends Construct {
     // Create EventBridge rule to invoke the Lambda function every N minutes
     this.schedule = new EventBridgeSchedule(this, 'EventBridgeSchedule', {
       func: this.lambda.func,
-      intervalInMinutes,
+      intervalInSeconds: intervalInMinutes * 60,
     });
   }
 }
