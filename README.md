@@ -26,8 +26,10 @@ export class ExampleStack extends Stack {
 
     // Create a live channel (MediaLive + MediaPackage)
     const {eml, empv1: emp} = new LiveChannelFromMp4(this, 'LiveChannelFromMp4', {
-      sourceUrl: 's3ssl://example_bucket/test.mp4',
-      timecodeBurninPrefix: 'Ch1',
+      sourceUrl: [
+        's3ssl://example_bucket/test-1.mp4',
+        's3ssl://example_bucket/test-2.mp4',
+      ],
       autoStart: true,
     });
 
