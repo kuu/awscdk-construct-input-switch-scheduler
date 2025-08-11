@@ -23,7 +23,7 @@ export class Lambda extends Construct {
     const JS_ENTRY = path.resolve(__dirname, 'code', 'index.js');
 
     this.func = new NodejsFunction(scope, 'ScheduleInputSwitch', {
-      runtime: Runtime.NODEJS_18_X,
+      runtime: Runtime.NODEJS_LATEST,
       entry: fs.existsSync(TS_ENTRY) ? TS_ENTRY : JS_ENTRY,
       handler: 'handler',
       timeout: Duration.seconds(30),
