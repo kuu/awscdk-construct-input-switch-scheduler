@@ -2,9 +2,9 @@ import { awscdk } from 'projen';
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Kuu Miyazaki',
   authorAddress: 'miyazaqui@gmail.com',
-  cdkVersion: '2.148.0',
+  cdkVersion: '2.210.0',
   defaultReleaseBranch: 'main',
-  jsiiVersion: '~5.4.0',
+  jsiiVersion: '~5.9.0',
   name: 'awscdk-construct-input-switch-scheduler',
   projenrcTs: true,
   repositoryUrl: 'https://github.com/kuu/awscdk-construct-input-switch-scheduler.git',
